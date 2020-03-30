@@ -9,7 +9,7 @@
 				  <%
 				  var image_src = '../resources/img/helmet.jpg';
 
-					if (thisData) {
+					if (typeof thisData != 'undefined') {
 
 
 							 image_src = thisData[0].img_src
@@ -28,7 +28,7 @@
 							 			but will display the player's name-->
 										<%
 
-										if (idName) {
+										if  (typeof idName != 'undefined') {
 										    var players = '';
 											idname.forEach(function(player){
 										  		 players += '<option value="' + player.id + '">' + player.name + '</option>';
@@ -52,7 +52,7 @@
 							<td>
 
 								<%
-								if (thisData) {
+								if (typeof thisData != 'undefined') {
 										%>
 										 <%- thisData[0].year %>
 								<% } %>
@@ -63,7 +63,7 @@
 							<th>Major</th>
 							<td>
 								<%
-								if (thisData) {
+								if (typeof thisData != 'undefined') {
 										%>
 										 <%- thisData[0].major %>
 								<% } %>
@@ -73,7 +73,7 @@
 							<th>Games Played</th>
 							<td>
 								<%
-								if (game_n) {
+								if (typeof game_n != 'undefined') {
 										%>
 										 <%- game_n[0].count %>
 								<% } %>
@@ -82,7 +82,7 @@
 						<tr>
 							<td>Passing Yards:
 								<%
-								if (thisData) {
+								if (typeof thisData != 'undefined') {
 										%>
 										 <%- thisData[0].passing_yards %>
 								<% } %>
@@ -90,7 +90,7 @@
 							<td>Avg. Passing Yards:
 								<%
 
-								if (thisData) {
+								if (typeof thisData != 'undefined') {
 										%>
 										 <%- (thisData[0].passing_yards)/(game_n[0].count) %>
 								<% } %>
@@ -100,7 +100,7 @@
 							<td>Rushing Yards:
 								<%
 
-								if (thisData) {
+								if (typeof thisData != 'undefined') {
 										%>
 										 <%- thisData[0].rushing_yards %>
 								<% } %>
@@ -108,7 +108,7 @@
 							<td>Avg. Rushing Yards:
 								<%
 
-								if (thisData) {
+								if (typeof thisData != 'undefined') {
 										%>
 										 <%- (thisData[0].rushing_yards)/(game_n[0].count) %>
 								<% } %>
@@ -117,14 +117,14 @@
 						<tr>
 							<td>Receiving Yards:
 								<%
-								if (thisData) {
+								if (typeof thisData != 'undefined') {
 										%>
 										 <%- thisData[0].receiving_yards %>
 								<% } %>
 							</td>
 							<td>Avg. Receiving Yards:
 								<%
-								if (thisData) {
+								if (typeof thisData != 'undefined') {
 										%>
 										 <%- (thisData[0].receiving_yards)/(game_n[0].count) %>
 								<% }%>
